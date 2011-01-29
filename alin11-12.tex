@@ -1,0 +1,143 @@
+\documentclass[a4paper,fleqn]{article}
+\input{../../std}
+\usepackage{fullpage}
+\title{}
+\author{}
+\date{\today}
+\begin{document}
+	kol: z 9, 10, 11, 12 (do 5)
+	\section*{Zad. 6}
+	\[ l: \left\{ \begin{matrix} x=2-3t\\ y = 1+t\\ z=t \end{matrix} \right.,\; t\in\Rls \]
+	\[ P(-1,2,1) \in l \]
+	\[ \Pi: x-2y+z+3 = 0 \]
+
+	\[ d(P,\Pi) = \frac{ |-1-4+1+3| }{ \sqrt{1+4+1} } = \frac{1}{\sqrt{6}} = \frac{\sqrt{6}} 6 \]
+	\[ d(A,\Pi) = \frac{ |2-3t-2-2t+t+3| }{\sqrt 6} = \frac{|3-4t|}{\sqrt 6} \]
+
+	\begin{align*}
+		 A = (2,1,0): \;&|3-4t|=3 \\
+		 	&3-4t =  3 \\
+		 	&-4t = 0 \\
+		 	&t= 0 \\
+		 	\lor \\
+		 	&3-4t = -3 \\
+		 	&-4t = -6 \\
+		 	&t= \frac 3 2
+	\end{align*}
+	\[ B = (-\frac 5 2, \frac 5 2, \frac 3 2) \]
+
+	\section*{Zad. 7}
+	\[ \left\{ \begin{matrix}
+		a(x+y+1)+b(x-z+1) = 0\\
+		c(x+y+z)+d(y+z+1) = 0
+	\end{matrix}\right. \]
+	\[ a^2 + b^2 \neq 0 \]
+	\[ c^2 + d^2 \neq 0 \]
+	\[ \left\{ \begin{matrix}
+		x(a+b) + a y + (-b)z +a + b = 0 \\
+		xc + (c+d)y + (c+d)z + d = 0
+	\end{matrix}\right. \]
+	\[ c+d=\lambda a \]
+	\[ c+d = \lambda (-b) \]
+	\[a=-b \]
+	\[ \begin{bmatrix}
+		a+b & a & -b & | & -(a+b) \\
+		c & c+d & c+d &|& -d
+	\end{bmatrix} \]
+	\[ c= 0 \]
+	\[ \begin{bmatrix}
+		0 & -b & -b & | & 0 \\
+		0 & d & d &|& -d
+	\end{bmatrix} \]
+
+	\[ \left\{ \begin{matrix}
+		-by - bz = 0 | :-b \\
+		dy + dz +d = 0 | :d
+	\end{matrix}\right. \]
+
+	\[ \Pi_1 : y+z= 0, P(0,0,0)\in\Pi_1 \]
+	\[ \Pi_2 : y+z+1 = 0\]
+	\[ d(P,\Pi_2)=\frac{|1|}{\sqrt 2} = \frac 1 {\sqrt 2} \]
+
+	\section*{Zad. 8}
+	\[ d(P,\Pi) = \frac{ |1+2| }{ \sqrt b } = \frac{\sqrt b} 2 \]
+	\[ l: \left\{ \begin{matrix} x=1+t\\ y =1+2t\\ z=0-t \end{matrix} \right.,\; t\in\Rls \]
+
+	\[ \frac{ \sqrt 6} 2 = \frac{ |1+t+2+4t+t| }{\sqrt 6 } \]
+	\[ | 6t+3 | = 3 \]
+	\[ t = 0 \lor t = -1 \]
+	\[ P'(1-1; 1-2; 1) \]
+	\[ P'(0,-1,1) \]
+
+	\section*{Z12: Zad. 1}
+	(z kolosa? albo 3)
+	\[ f(x) = 2 \]
+	\[ (f,f) = 2^2 - 2^2 = 0 \]
+	nie jest. może być też np $f(x)=x$
+
+	\section*{Zad. 2}
+	\[0 = (1,ax+1) = \int_0^1 (ax+1)dx = [\frac{ax^2}{2}+x] |_0^1 = \frac a 2 + 2
+		\Rightarrow a = -2\]
+	\[ 0 = (1,x^2-bx+c) = \frac 1 3 - \frac b 2 + c\]
+	\[ 0 = (ax+1, x^2 - bx + c) = \int_0^1 (1-2x)(x^2-bx+c)dx =
+		\int_0^1 (x^2-bx+c-2x^3 +2bx^2 -2cx) dx = \ldots = -\frac 1 6 + \frac 1 6 b
+		\Rightarrow b= 1\]
+	\[ c=\frac 1 6 \]
+
+	\section*{Zad. 3}
+	\[ (u,v) = (u,w) = (v,w) = 0 \]
+	\[ || u || = 1 = \sqrt{(u,u)} \]
+	\[ || v || = 2 \]
+	\[ || w || = 2 \]
+	\[ \Rightarrow (u,u) = 1, \; (v,v) = 4, \; (w,w) = 9 \]
+
+	\[ (a,b) = ||a||\cdot||b||\cdot \cos \alpha \]
+
+	\[ (u-2v+w, 9u+3v+2w) = 9(u,u) - 18(u,v) + 9(u.w) + 3(u,v) - 6(v,v)
+		+3(v,w) + 2(u,w) - 4(v,w) + 2(w,w) = 9 - 6\cdot4 + 2\cdot 9 = 3\]
+
+	\[ \sqrt{(u-2v+w, 9u+3v+2w)} = \sqrt{81(u,u)+9(v,v)+4(w,w)} =
+		\sqrt{81+36+36} = \sqrt {153} \]
+	\[ \cos\alpha = \frac{3}{\sqrt{26\cdot153}} \Rightarrow \alpha =
+		\arccos\frac{3}{\sqrt{26\cdot153}} \]
+
+	\section*{Zad. 4}
+	1. baza ortogonalna
+	\[ \Rls[x]_2 : (1,x,x^2) \]
+	\[ (e_1, e_2, e_3) \leftarrow \text{baza ortogonalna} \]
+	\[ e_1 = 1 \]
+	\[ e_2 = x+\alpha 1 \]
+	\[ 0 = (e_1, e_2) = (1,x+\alpha \cdot1) = (1,x) + \alpha\cdot(1,1) = \ldots\]
+	\[(1,1) = 1+1+1 = 3 \]
+	\[ (1,x) = 1+1\cdot2 = 3 \]
+	\[ \ldots = 3 +\alpha\cdot3 \Rightarrow \alpha = -1 \]
+
+	\[ e_3 = x^2 + \alpha_1 e_1 + \alpha_2 e_2 = x^2 + \alpha_1 1 \alpha_2 (x-1) \]
+	\[ 0 = (e_3,e_1) = (x^2 + \alpha_1 1 + \alpha_2 (x-1), 1) = (x^2,1)+
+		\alpha_1(1,1) + \alpha_2(x-1,1) = 5+\alpha_1\cdot 3 \Rightarrow \alpha_1=-\frac5 3 \]
+	\[ 0 = (e_3, e_2) = (x^2 + \alpha_1 1 + \alpha_2 (x-1), x-1) = (x^2,x-1)+
+		\alpha_1(1,x-1) + \alpha_2(x-1,x-1) = 4+\alpha_2\cdot 2 \Rightarrow \alpha_2=-2 \]
+
+	\[ e_1 = 1, \; e_2 = x-1 ,\; e_3=x^2-\frac 5 3 - 2(x-1) = x^2 - 2x + \frac 1 3 \]
+
+	2. baza ortonormalna
+	\[ e_1^* = \frac {e_1}{\vert e_1 \vert} = \frac 1 {\sqrt{(1,1)}} = \frac 1 {\sqrt 3 } \]
+	\[ e_2^* = \frac {e_2}{\vert e_2 \vert} = \frac{x-1}{\sqrt 2} \]
+	\[ e_3^* = \frac{x^2-2x+\frac 1 3}{\sqrt{(1/3)^2+(-2/3)^2 + (4/3)^2}} =
+		\frac{3x^2-6x+1}{\sqrt 6} \]
+
+	3. Dow. wektor $u\in V$ ma w bazie ortonormalnej $(v_1,\ldots,v_n)$ przedstawienie:
+	\[ u = (u,v_1)\cdot v_1 + \ldots + (u,v_n)\cdot v_n \]
+	\[ u = \big((u,v_1) + \ldots + (u,v_n)\big)_\mathfrak{B} \]
+
+	\[ x^2+x+1 \text{ w bazie } (e_1^*,e_2^*,e_3^*) \]
+	\[ (x^2+x+1, \frac 1 {\sqrt 3} ) = \frac 11 {\sqrt 3} \]
+	2, 3...
+
+	\section*{Zad. 5}
+	z egzaminu! Układ jednorodny. (kartka)
+%	\[ r\begin{bmatrix}
+%		1 &1 &-3 &1 \\
+%		2&
+\end{document}
+

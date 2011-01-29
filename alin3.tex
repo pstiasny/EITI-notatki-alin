@@ -1,0 +1,71 @@
+\documentclass[a4paper,fleqn]{article}
+\input{../../std}
+\usepackage{fullpage}
+\title{}
+\author{}
+\date{\today}
+\begin{document}
+	\section*{Zad. 1}
+	Rozkład na ułamki proste
+
+	\paragraph{a}
+	\[ \frac{ 3x^2 - 6x - 4 }{ x^3 - 3x^2 - 4x + 12 } =
+		\frac{ 3x^2 - 6x - 4 }{ (x-2)(x+2)(x-3) } \]
+	\[ \frac{ 3x^2 - 6x - 4 }{ (x-2)(x+2)(x-3) } =
+		\frac{A}{x-2} + \frac{B}{x-3} + \frac{C}{x+2} \]
+	\[ 3x^2 - 6x - 4 = A(x-3)(x+2) + B(x-2)(x+2) + C(x-2)(x-3) \]
+	\begin{align*}
+		\dla x = 3:& \quad 5 = B(3-2)(3+2) = 5B \Rightarrow B = 1 \\
+		x = 2:& \quad -4 = A(2-3)(2+2) = A \cdot (-1) \cdot 4 \Rightarrow A = 1 \\
+		x = -2:& \quad 20 = C(-2-2)(-2-3) = C \cdot (-4) \cdot (-5) \Rightarrow C = 1
+	\end{align*}
+
+	\paragraph{b}
+	\[ \frac{ x^4 + 3x^3 + 10x^2 + 9x + 26 }{ (x^2+x+5)^2 (x-1)^2} =
+		\frac{A}{x-1} + \frac{B}{(x-1)^2} + \frac{Cx+D}{x^2+x+5} + \frac{Ex+F}{(x^2+x+5)^2} \]
+	%\[ (x^2+x+5)^2 = x^4+x^2+25+2x^3+10x^2+10x \] %?
+	rozkład licznika:
+	\[ (x^4+2x^3+11x^2+10x+25) + \underbrace{(x^3-x^2-x+1)}_{x^2(x-1) - (x-1)} \]
+	\[ \frac{ (x^2+x+5)^2 + (x-1)^2(x+1) }{ (x^2+x+5)^2 + (x-1)^2 } =
+		\frac{1}{(x-1)^2} + \frac{x+1}{(x^2+x+5)^2} \]
+
+	\paragraph{c}
+	\[ \frac{ x^3+x^2+6x+6 }{ x^4+5x^3+7x^2+5x+6 } =
+		\frac{ x^3+x^2+6x+6 }{ x^2(x^2+5x+6)+(x^2+5x+6) } =
+		\frac{ x^3+x^2+6x+6 }{ (x^2+1)(x^2+5x+6) } =
+		\frac{ x^2+5x+6+x(x^2+1) }{ (x^2+1)(x+2)(x+3) } \]
+	\[ \frac{x}{ (x+2)(x+3) } = \frac{A}{x+2} + \frac{B}{x+3} =
+		\frac{ A(x+3) + B(x+2) }{ (x+2)(x+3) } \]
+	\begin{align*}
+		\dla x = -2:& \quad A = -2 \\
+		x = -3:& \quad B = 3
+	\end{align*}
+
+	\section*{Zad. 2}
+	\paragraph{a}
+	\[ \frac{ 2z^3 }{ z^4-1 } = \frac{ 2z^3 }{ (z^2-1)(z^2-(-1)) } =
+		\frac{ 2z^3 }{ (z-1)(z+1)(z-j)(z+j) } =
+		\frac{A}{z-1} + \frac{B}{z+1} + \frac{C}{z-j} + \frac{D}{z+j} \]
+	\[ A(z+1)(z-j)(z+j) + B(z-1)(z-j)(z+j) + C(z+1)(z-1)(z+j) + D(z-1)(z+1)(z-j)
+		= 2z^3 \]
+	podstawiając wartości:
+	\begin{align*}
+		\dla z = 1:& \quad A = \frac 1 2 \\
+		z = -1:& \quad B = \frac 1 2 \\
+		z = j:& \quad C = \frac 1 2 \\
+		z = -j:& \quad D = \frac 1 2
+	\end{align*}
+	a więc ostatecznie rozkład to:
+	\[ \frac 1 2 \left(
+		\frac{1}{z-1} + \frac{1}{z+1} + \frac{1}{z-j} + \frac{1}{z+j} \right) \]
+
+	\paragraph{b}
+	\[ \frac{ 2z^4 + 8z^2 + 32 }{ z(z^2 + 4)^2 } =
+		\frac{ 2(z^4 + 8z^2 + 16) - 8z^2 }{ 2(z^2 + 4)^2 } =
+		\frac 2 2 - \frac{8z}{(z^2+4)^2} \]
+	\[ \frac{8z}{(z^2+4)^2} = \frac{A}{z+2j} + \frac{B}{(z+2j)^2} +
+		\frac{C}{z-2j} + \frac{D}{(z-2j)^2} \]
+	$A = 0$, $B=\frac 1 j$, $C = 0$, $D = - \frac 1 j$
+
+\end{document}
+

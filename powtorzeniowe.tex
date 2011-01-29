@@ -1,0 +1,94 @@
+\documentclass[a4paper,fleqn]{article}
+\input{../../std}
+\usepackage{fullpage}
+\title{Zadania z zestawu powtórzeniowego}
+\author{}
+\date{\today}
+\begin{document}
+	\section*{Zad. 1}
+	Znaleźć i naszkicować
+	\paragraph{a}
+	\[ \{ z\in\Complex : z^4 = (1+2j)^8 \} \]
+	\[ (1+2j)(1+2j) = -3 + 4j \]
+	\[ z^4 = (-3+4j)^4 \]
+	Pierwiastki na okręgu: $-3+4j$, $4+3j$, $3-4j$, $-4-3j$
+	\section*{Zad. 55}
+	\paragraph{a}
+	Wielomian charakterystyczny:
+	\[ \det(A-\lambda E) = \det \begin{bmatrix}
+		2-\lambda & -2 & -1 & 3\\
+		0 & 3-\lambda & 1 &2 \\
+		0&1 & 5-\lambda & 4 \\
+		0 & -1 & -2 &  1-\lambda
+		\end{bmatrix} = \ldots = (\lambda-2)^3 (\lambda-3) \]
+	\[ \lambda =2 \lor \lambda = 3 \]
+
+	\[ A-3E = \begin{bmatrix}
+		-1 & -2 & -1 & 3 \\
+		0&0&1&2\\
+		0&1&2&4\\
+		0&-1&-2&-4
+		\end{bmatrix} \]
+	\[ r(A-3E) = 3 \]
+	\[ 4-3 = 1 \]
+	wektor własny dla $\lambda = 3 $
+
+	\[ \lambda = 2 \]
+	\[ A-2E = \begin{bmatrix}
+		0 & -2 & -1 & 3 \\
+		0& 1 & 1 & 2 \\
+		0 & 1 & 3 & 4 \\
+		0 & -1 & -2 & -4
+		\end{bmatrix}
+		\]
+	\[ 4 -3 = 1 \]
+	\[ r = 3 \]
+
+	wektor dołączony?
+
+	\section*{Zad. ?}
+	\[ \lambda^2 - 6\lambda + 5 = (\lambda-1)(\lambda-5) \]
+	\[ \lambda = 1 \lor \lambda = 5 \]
+	\[ \begin{bmatrix} 1& 0\\ 0& 5 \end{bmatrix} \]
+	\[ \begin{bmatrix} \frac 1 2 & 0 \\ 0 & \frac 5 2 \end{bmatrix} \]
+	\[ \det(\frac 1 2 B -\lambda E) = (\lambda-\frac 1 2)(\lambda-\frac 5 2) =
+		 \lambda^2 - 3\lambda + \frac 5 4 \]
+
+	\section*{Zad. 36}
+	\[ z= \overline{z^4} = \overline z ^ 4\]
+	\[ |z| = |\overline z ^ 4 |= |z|^4 \]
+	\[ |z|(|z|^3 - 1) = 0 \]
+	\[ |z| = 1 \lor |z| = 0 \]
+	Przy $|z|=0$ mamy  $z=0$, przy $|z|=1$:
+	\[ z= \overline z ^ 4 \; |\cdot z^4 \]
+	\[ z^5 = |z|^8 \]
+	\[ z^5 = 1 \]
+	Pierwiastki z 1 geometrycznie. %Znajdujemy pierwiastki sprzężone.
+
+%	\section*{Zad. 44}
+%	\[ E = \{ \begin{bmatrix}
+	\section*{Zad. 32}
+	\[ [A-\lambda E] \cdot v = 0 \]
+	\[ \begin{bmatrix}
+		x_1 - 2 & x_2 \\
+		x_3 & x_4 - 2 \end{bmatrix}
+		\cdot \begin{bmatrix} 1 \\ 4 \end{bmatrix}
+		= (0,0) \]
+	\[ \begin{bmatrix}
+		x_1 - 1 & x_2 \\
+		x_3 & x_4 - 1 \end{bmatrix}
+		\cdot \begin{bmatrix} 1 \\ 3 \end{bmatrix}
+		= (0,0) \]
+	\[ x_1 -2 + 4x_2 = 0 \land x_1 - 1 + 3x+2 = 0 \]
+	\[ x_3 + 4x_4 - 8 = 0 \land x_3 + 3 x_4 -3 =0 \]
+	\[ x_1 = -2 \; x_2 = 1 \; x_3 = -12 \; x_4 = 5 \]
+
+	łatwiej tak:
+	\[ \phi((1,4)) = (2,8) \]
+	\[ \phi((1,3)) = (1,3) \]
+	korzystając z liniowości:
+	\[ \phi((1,0)) = \phi((1,3)-3(0,1)) =  (2,8)-(1,3) = (1,5) \]
+	\[ \phi((0,1)) = \phi((1,4)-(1,3)) = (2,8)-(1,3) = (1,5) \]
+	\[ M_E^E (\phi) = \begin{bmatrix} -2 & 1 \\ -12&5 \end{bmatrix} \]
+\end{document}
+

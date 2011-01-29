@@ -1,0 +1,160 @@
+\documentclass[a4paper,fleqn]{article}
+\input{../../std}
+\usepackage{fullpage}
+\title{}
+\author{}
+\date{\today}
+\begin{document}
+	\section*{Zad. 1}
+	\[ \dim \Rls[x]_3 = 4 \]
+	\paragraph{a}
+	NIE, ponieważ jest 5 wektorów a baza ma wymiar 4.
+
+	\paragraph{b}
+	\[ a(x+1) + b(x^3+2x) + c(x^2-5x+2) + d(7x^3+2x^2) = 0 \Leftrightarrow
+		a = b = c = d = 0 \]
+	\[ x^3 (b+7d) + x^2 (c+2d) + x (a+2b-5c) + a + 2c = 0 \]
+	\[ \left\{
+		\begin{array}{l l l}
+			b + 7d=0 & \rightarrow b=-7b & \\
+			c + 2d = 0 & \rightarrow c=-2d & \\
+			a + 2b - 5c = 0 & & d \in \Rls \\
+			a + 2c = 0 & \rightarrow a = 4d &
+		\end{array}
+		\right. \]
+	NIE, pokazaliśmy, że 3 ze zmiennych są zależne od 4ej. Można zapisać
+	dowolną wartość $d$ w bazie wyznaczonej przez pozostałe wektory. Np dla
+	$d=-1$:
+	\[ 7x^3 + 2x^2 = \underbrace{-4}_a (x+1) + \underbrace{7}_b (x^3+2x) +
+		\underbrace{2}_c (x^2 - 5x + 2) \]
+
+	\paragraph{c}
+	\[ a(\frac 1 3 x^2 + 5x) + b(-x^3) + c(2x + 1) + d(5x) = 0 \]
+	\[ \left\{
+		\begin{array}{l l}
+			-b = 0 & \rightarrow b=0 \\
+			\frac 1 3 a = 0 & \rightarrow a = 0 \\
+			5a + 2c + 5d = 0 & \rightarrow d = 0
+		\end{array}
+		\right. \]
+	\[ c = 0 \]
+	TAK. $\mathcal{A} = \Big(\underbrace{\frac 1 3 x^2 + 5x}_{u_1},
+	\underbrace{-x^3}_{u_2}, \underbrace{2x + 1}_{u_3}, \underbrace{5x}_{u_4}\Big)$
+	wyznacza bazę $\Rls[x]_3$. Zapiszmy np. $x^3$ w $\mathcal{A}$:
+	\[	x^3 = 0u_1 + (-1)u_2 + 0u_3 + 0u_4 = (0,-1,0,0)_{\mathcal{A}} \]
+
+	\cdots
+
+	\section*{Zad. 3}
+	\paragraph{a}
+	\[ V = \{ w \in \Rls[x]_2 : w(1) = w'(0) \} = \{ ax^2+bx-a : a,b\in \Rls \} \]
+	\[ ax^2 + bx - a = a(x^2-1)+bx \]
+	\[ \mathcal{B} = (x^2-1,x) \]
+	\[ \dim V = 2 \]
+
+	\paragraph{b}
+	\[ W = \{ w \in \Rls[x]_4 : w(1) = w'(1) = 0 \} =
+		\{ (x-1)^2 \cdot g(x) : g(x)\in\Rls[x]_2 \} \]
+	\[ (x-1)^2 \cdot (ax^2 + bx +c) = a(x-1)^2 x^2 + b(x-1)x + c(x-1)^2 \]
+	\[ \mathcal{B} = \left( (x-1)^2 x^2, (x-1)^2x, (x-1)^2 \right) \]
+
+	\section*{Zad. 5}
+	\[ c = (u_1, u_2, u_3) \]
+	\[ \mathcal{B} = (u_1 - 2u_2, u_1 - 2u_3 + u_3, u_2 - u_1) \]
+	\[ v_c = (\alpha_1, \alpha_2, \alpha_3)_{\mathcal{B}} = (4,-1,2)_c =
+		4u_1 - 1u_2 + 2u_3 = \]
+	\[ \alpha_1(u_1-2u_2) + \alpha_2(u_1 - 2u_2 + u_3) +
+		\alpha(u_2-u_1) = u_1(\alpha_1+\alpha_2-\alpha_3) +
+		u_2(-2\alpha_a - 2\alpha_2 + \alpha_3) + u_3\alpha_2 \]
+	\cdots
+
+	\[ v_{\mathcal{B}} = (-5, 2, -7) \]
+
+	\section*{Zad. 6}
+	\[ (x-y, 3y, 2y-x, 2x) = x (1,0,-1,2) + y (-1,3,2,0) \]
+	\[ \mathcal{B} = \left( (1,0,-1,2), (-1,3,2,0) \right) \]
+	\[ \dim V = 2 \]
+
+	\[ (1,3,0,4) = (4,4)_C \]
+	\[ (1,3,0,4) = a(1,0,-1,2) + b(-1,3,2,0) = (2,1)_{\mathcal{B}} \]
+	\[ \left\{ \begin{array}{l l} 3b = 3 & a = 2 \\ 2a = 4 & b = 1\end{array} \right. \]
+
+	\[ 2(1,0,-1,2)+1(-1,3,2,0) = 4.5 (1,0,-1,2)+4.5 (-1,3,2,0) =
+		4(\frac 1 2, 0, -\frac 1 2 , 1) \cdots \]
+
+	\section*{Zad. 7}
+	\[ (1,1,1) = (1,1,0) + (1,0,1) - \frac 1 2 (2,0,0) \]
+
+	\[ \phi((1,1,1)) = \phi((1,1,0)+(1,0,1)-\frac 1 2 (2,0,0)) =
+		\phi((1,1,0)) + \phi((1,0,1)) - \frac 1 2 \phi((2,0,0)) = \cdots \]
+	nie jest przekształceniem lin.
+
+	\section*{Zad. 8}
+	\[ 1)\quad F(z_1+z_2) = F(z_1)+F(z_2) \quad z_1, z_2 \in \Complex \]
+	\[ 2)\quad F(\alpha z) = \alpha F(z) \quad \alpha \in \mathbb{K}, z \in \Complex \]
+
+	\[ 1)\quad F(z_1 + z_2) = \overline{z_1+z_2} = \overline{z_1} + \overline{z_2} = F(z_1) + F(z_2) \]
+	\[ 2)\quad F(\alpha z) = \overline{\alpha z} = \overline{\alpha} \cdot \overline{z} = \overline{\alpha} F(z) \]
+	a-tak, b-nie ($\alpha = j$, $z = 1$)
+
+	\section*{Zad. 9}
+	\[ \phi : \mathbb{K}^n \to \mathbb{K}^m \]
+	\[ (x_1, \ldots, x_n) \mapsto
+		(\sum^n_{i=1} a_{1i}, \ldots, \sum^n_{i=1} a_{i})
+		\quad a_{ij} \in \mathbb{K} \]
+	\paragraph{a}
+	\[ K = \Rls, \; a=m=2, \; \phi : \Rls^2 \to \Rls^2 \]
+	\[ (x,y) \mapsto (x-y, -5x+5y) \]
+	\[ \ker \phi = \{ (x,y):\phi((x,y)) = (0,0) \} \]
+	\[ x-y=0 \land -5x+5y = 0 \Rightarrow x = y \]
+	\[ \ker \phi = \{ (x,x) : x\in\Rls \} = \text{Lin}((1,1)) \]
+	\[ \dim \ker \phi = 1 \land \dim \Rls^2 = 2 \Rightarrow \dim \text{Im} \phi = 1 \]
+	\[ \text{Im} \phi = \{ \phi((x,y)) : (x,y) \in \Rls^2 \} =
+		\{ (x-y, -5(x-y)) : x,y\in\Rls \} = \{ (a,-5a) : a\in\Rls \} = \text{Lin}((1,-5)) \]
+
+	\paragraph{c}
+	\[ \phi : \Rls^3 \to \Rls[x]_2 \]
+	\[ (a,b,c) \mapsto (a-c)x^2 + (b+\textbf{4})x + c - 3a \]
+	\[ \phi ((0,0,0)) = 0 \]
+	\[ (a-c,\;b+4,\;c-3a) \]
+
+	\paragraph{d}
+	\[ \phi : \Rls[x]_3 \to R^3 \]
+	\[ w(x) \mapsto (w(1), w'(1), w''(1)) \]
+	\[ \phi( w(x)+ v(x) ) = \phi ((w+v)(x)) = \ldots = \alpha(w(1),w'(1),w''(1)) \]
+
+	\paragraph{e}
+	\[ ax^2 + bx + c \mapsto x(2ax+b) \]
+	(kombinacje liniowe)
+	\[ \ker \phi = \{ w(x) : \phi(w(x)) = 0 \} = \{ w(x) : w'(x) = 0 \} = \Rls \]
+	\[ \dim \ker \phi = 1 \]
+	\[ \dim \text{Im} \phi = \dim \Rls[x]_2 - \dim \ker \phi = 3- 1 = 2 \]
+	\[ \text{Im} \phi = \{ 2ax^2 + bx : a,b\in\Rls \} = \text{Lin} (2x^2,x) \]
+	równoważnie $\text{Lin}(x^2,x)$ jest bazą
+
+	\paragraph{f}
+	\[ \dim \Complex[x] = \infty \]
+	\[ \ker \phi = \{ f \in \Complex[x] : \phi(f) = 0 \} \]
+
+	\[ \dim \text{Im}\phi \leqslant 1 \]
+	\[ \dim \text{Im} \neq 0 \Rightarrow \dim \text{Im} \phi =
+		1 \xrightarrow{\text{Im} \phi \subset \Complex}
+		\text{Im} \phi = \Complex \]
+
+	\section*{Zad. 10}
+	\[ \mathcal{B} = ((1,1,1), (1,2,3), (1,2,4)) \text{ - baza } \Rls^3 \]
+	\[ \phi((a,b,c)) = \phi( a(1,0,0) + b(0,1,0) + c(0,0,1)) =
+		a\phi ((1,0,00) + b\phi((0,1,0)) + c\phi((0,0,1)) \]
+	\[ (0,0,1) = (1,2,4) - (1,2,3) \]
+	\[ \phi((0,0,1)) = (2x^2 - 4x) - (-3x) = 2x^2 - x \]
+	\[ \phi((0,1,0)) = \phi((1,2,3) - (1,1,1) -2(0,0,1)) =
+		-3x-(2x^2-3x)-2(2x^2-x) = -6x^2 + 2x \]
+	\[ \phi((1,0,0)) = \phi ((1,1,1)-(0,1,0)-(0,0,1)) =
+		2x^2 - 3x - (-6x^2+2x) - (2x^2-x) = 6x^2-4x \]
+
+	\[ \phi((a,b,c)) = a(6x^2 - 4x) + b(-6x^2 + 2x) + c(2x^2-x) =
+		x^2(6a-6b+2c) + x(-4a + 2b - c) \]
+
+	\[ \ker \phi = \{ (a,b,c)\in\Rls^3: \phi ((a,b,c)) = 0 \} \]
+\end{document}
+
