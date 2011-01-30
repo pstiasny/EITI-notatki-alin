@@ -13,6 +13,8 @@
 	\[ z^4 = (-3+4j)^4 \]
 	Pierwiastki na okręgu: $-3+4j$, $4+3j$, $3-4j$, $-4-3j$
 	\section*{Zad. 55}
+	Dane jest przekształcenie liniowe L, t. że $M_{\mathfrak{A}}^{\mathfrak{A}}(L) = A$.
+	Znaleźć bazę $B$, by L miało w tej bazie macierz w postaci kanonicznej Jordana, jeśli:
 	\paragraph{a}
 	Wielomian charakterystyczny:
 	\[ \det(A-\lambda E) = \det \begin{bmatrix}
@@ -38,13 +40,67 @@
 		0 & -2 & -1 & 3 \\
 		0& 1 & 1 & 2 \\
 		0 & 1 & 3 & 4 \\
-		0 & -1 & -2 & -4
+		0 & -1 & -2 & -3
 		\end{bmatrix}
 		\]
 	\[ 4 -3 = 1 \]
 	\[ r = 3 \]
 
 	wektor dołączony?
+	\[ (A-2E)^2 =
+		\begin{bmatrix}
+			0 & -6 & -11 & -17\\
+			0 & 0 & 0 & 0\\
+			0 & 0 & 2 & 2\\
+			0 & 0 & -1 & -1
+		\end{bmatrix} \]
+	\[ r((A-2E)^2) = 2 \]
+	$ 4 - 2 = 2 \Rightarrow $ 1 wektor dołączony 1szego rzędu.
+
+	\[ (A-2E)^3 =
+		\begin{bmatrix}
+			0 & 0 & -5 & -5\\
+			0 & 0 & 0 & 0\\
+			0 & 0 & 2 & 2\\
+			0 & 0 & -1 & -1
+		\end{bmatrix}
+	\]
+	\[ r((A-2E)^3) = 1 \]
+	$4-1 = 3 \Rightarrow $ 1 wektor dołączony 2giego rzędu.
+
+	\[ J =
+		\begin{bmatrix}
+			2 & 1 & 0 & 0\\
+			0 & 2 & 1 & 0 \\
+			0 & 0 & 2 & 0 \\
+			0 & 0 & 0 & 3
+		\end{bmatrix}
+	\]
+	\[ P =
+		\begin{bmatrix}
+			-2 & -1 & 3 \\
+			0  & 1  & 2 \\
+			1  & 2  & 4
+		\end{bmatrix}
+		\quad
+		\begin{cases}
+			-2x_2 - x_3 + 3x_4 &= x_1 \\
+			x_3 + 2x_4 &= 0 \\
+			x_2 + 2x_3 + 4x_4 &= 0
+		\end{cases}
+	\]
+	\[ x_2 = 0 \]
+	\[ x_3 = \frac 2 5 x_1 \]
+	\[ x_4 = \frac 1 5 x_1 \]
+	\[ x_1 \begin{bmatrix} 1 \\ 0 \\ -\frac 2 5 \\ \frac 1 5 \end{bmatrix} \]
+
+	\[ (A-2E)^3 \cdot X = 0 \]
+	\[ (A-2E)^2 \cdot X \neq 0 \]
+	$ X = \begin{bmatrix} 0\\1\\0\\0\end{bmatrix} $ wektor dołączony 2go rzędu
+	dla $\lambda = 2$, $Y = \begin{bmatrix}-2\\1\\1\\-1\end{bmatrix} $ 1go rzędu,
+	$ Z = \begin{bmatrix}-6\\0\\0\\0\end{bmatrix} $
+
+	\[ B = ( \ldots ) \]
 
 	\section*{Zad. 34}
 	\[ \lambda^2 - 6\lambda + 5 = (\lambda-1)(\lambda-5) \]
